@@ -16,6 +16,11 @@ const Color = Loadable(lazy(() => import('pages/components-overview/Color')));
 const Shadow = Loadable(lazy(() => import('pages/components-overview/Shadow')));
 const AntIcons = Loadable(lazy(() => import('pages/components-overview/AntIcons')));
 
+//render - kube mangement
+const ApplicationsPage = Loadable(lazy(() => import('pages/applications/applications')));
+const DeploymentsPage = Loadable(lazy(() => import('pages/deployments/deployments')));
+const EnvironmentsPage = Loadable(lazy(() => import('pages/environments/envionments')));
+const EndpointsPage = Loadable(lazy(() => import('pages/endpoints/endpoints')));
 // ==============================|| MAIN ROUTING ||============================== //
 
 const MainRoutes = {
@@ -54,6 +59,22 @@ const MainRoutes = {
     {
       path: 'icons/ant',
       element: <AntIcons />
+    },
+    {
+      path: 'applicationsPage',
+      element: <ApplicationsPage />
+    },
+    {
+      path: 'deploymentsPage',
+      element: <DeploymentsPage />
+    },
+    {
+      path: 'environmentsPage',
+      element: <EnvironmentsPage />
+    },
+    {
+      path: 'endpointsPage',
+      element: <EndpointsPage />
     }
   ]
 };
